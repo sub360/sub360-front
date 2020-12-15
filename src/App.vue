@@ -1,21 +1,13 @@
 <template>
-  <img class="logo" alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3.0 + Element Plus + Vite" />
+  <transition>
+    <div id="app">
+      <router-view />
+    </div>
+  </transition>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
+<script lang="ts">
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+  name: 'App'
 }
 </script>
-
-<style scoped>
-.logo {
-  width: 50%
-}
-</style>
