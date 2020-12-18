@@ -1,5 +1,5 @@
 <template>
-    <div>ShortAddress page</div>
+ <div>address index page</div>
 </template>
 
 <script lang="ts">
@@ -7,7 +7,7 @@
     import { cryptoWaitReady, mnemonicGenerate } from '@polkadot/util-crypto';
 
     export default {
-        name: "ShortAddress"
+        name: "Address"
     };
 </script>
 

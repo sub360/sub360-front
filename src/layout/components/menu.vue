@@ -9,14 +9,10 @@
     active-text-color="#ffd04b"
   >
     <el-menu-item index="1"><router-link to="/wallet">钱包</router-link></el-menu-item>
-    <el-menu-item index="2"><router-link to="/short-address">短地址</router-link></el-menu-item>
-    <el-menu-item index="3"><router-link to="/staking">质押</router-link></el-menu-item>
-    <el-submenu index="4">
-      <template #title>工具</template>
-      <el-menu-item index="4-1"><router-link to="/tools/address/generate">地址生成</router-link></el-menu-item>
-      <el-menu-item index="4-2"><router-link to="/tools/tx/broadcast">广播交易</router-link></el-menu-item>
-      <el-menu-item index="4-3"><router-link to="/tools/tx/validate">验证交易</router-link></el-menu-item>
-    </el-submenu>
+    <el-menu-item index="2"><router-link to="/staking">质押</router-link></el-menu-item>
+    <el-menu-item index="3"><router-link to="/short-address">短地址</router-link></el-menu-item>
+    <el-menu-item index="4"><router-link to="/address">地址生成</router-link></el-menu-item>
+    <el-menu-item index="5"><router-link to="/tx">广播交易</router-link></el-menu-item>
   </el-menu>
 </template>
 
@@ -35,3 +31,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+  .el-menu-demo {
+
+  }
+</style>>

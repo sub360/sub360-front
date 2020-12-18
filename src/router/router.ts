@@ -10,52 +10,66 @@ const routes = [
     component: Layout,
     redirect: '/wallet/index'
   },
-  // 钱包
+  {
+    name: 'address',
+    path: '/address',
+    component: Layout,
+    children: [{
+      name: 'index',
+      path: '',
+      meta: { title: '地址' },
+      component: () => import('/@/views/address/index.vue'),
+    }]
+  },
+  {
+    name: 'shortAddress',
+    path: '/short-address',
+    component: Layout,
+    children: [
+      {
+        name: 'index',
+        path: '',
+        meta: { title: '短地址' },
+        component: () => import('/@/views/short-address/index.vue')
+      }
+    ]
+  },
+  {
+    name: 'staking',
+    path: '/staking',
+    component: Layout,
+    children: [{
+      name: 'index',
+      path: '',
+      meta: { title: '质押' },
+      component: () => import('/@/views/staking/index.vue'),
+    }]
+  },
+  {
+    name: 'tx',
+    path: '/tx',
+    component: Layout,
+    meta: { title: '交易', icon: 'tx' },
+    children: [{
+      name: 'index',
+      path: '',
+      meta: { title: '交易' },
+      component: () => import('/@/views/tx/index.vue'),
+    }]
+  },
   {
     name: 'wallet',
     path: '/wallet',
     component: Layout,
     children: [
       {
-        name: "index",
-        path: 'index',
+        name: 'index',
+        path: '',
         meta: { title: '钱包' },
         component: () => import('/@/views/wallet/index.vue')
       }
     ]
-  },
-  // // 质押
-  // {
-  //   name: 'staking',
-  //   path: '/staking',
-  //   component: Layout,
-  //   meta: { title: '质押', icon: 'staking' },
-  //   children: [{
-  //     name: 'staking',
-  //     path: '/staking',
-  //     component: () => import('@/views/staking'),
-  //     meta: { title: '地址生成' },
-  //   }]
-  // },
-  // // 工具
-  // {
-  //   name: 'tools',
-  //   path: '/tools',
-  //   component: Layout,
-  //   meta: { title: '工具', icon: 'tool' },
-  //   children: [{
-  //     name: 'address',
-  //     path: 'address',
-  //     component: () => import('@/views/tools/address'),
-  //     meta: { title: '地址生成' },
-  //   },
-  //   {
-  //     name: 'tx',
-  //     path: 'tx',
-  //     component: () => import('@/views/tools/tx'),
-  //     meta: { title: '交易' },
-  //   }]
-  // },
+  }
 ];
 
 // 导出路由 在 main.ts 里使用

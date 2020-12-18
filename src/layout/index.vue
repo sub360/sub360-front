@@ -1,17 +1,17 @@
 <template>
   <el-container class="app-container">
-      layout title
       <el-header>
-        <menu/>
+        <Menu />
       </el-header>
-      <app-main/>
+      <AppMain />
       <el-footer>
       </el-footer>
   </el-container>
 </template>
 
 <script lang="ts">
-import { AppMain, Menu } from "./components";
+import { default as AppMain } from './components/appMain.vue';
+import { default as Menu } from './components/menu.vue';
 
 export default {
   name: "Layout",

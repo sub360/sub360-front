@@ -1,10 +1,20 @@
 <template>
-    <div>wallet page</div>
+  <div>wallet index</div>
 </template>
 
 <script lang="ts">
 export default {
-  name: "Wallet"
+  name: "Wallet",
+  data() {
+    return {
+      activeIndex: '1',
+    };
+  },
+  methods: {
+    handleSelect(key: string, keyPath: string) {
+      this.activeIndex = key;
+    }
+  }
 };
 </script>
 
