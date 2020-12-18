@@ -1,9 +1,7 @@
 <template>
-  <transition>
-    <div id="app">
-      <router-view />
-    </div>
-  </transition>
+  <div id="app">
+    <router-view />
+  </div>
 </template>
 
 <script lang="ts">
