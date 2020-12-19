@@ -1,18 +1,18 @@
 <template>
   <el-menu
     :default-active="activeIndex"
-    class="el-menu-demo"
     mode="horizontal"
     @select="handleSelect"
-    background-color="#545c64"
-    text-color="#fff"
-    active-text-color="#ffd04b"
   >
-    <el-menu-item index="1"><router-link to="/wallet">钱包</router-link></el-menu-item>
-    <el-menu-item index="2"><router-link to="/staking">质押</router-link></el-menu-item>
-    <el-menu-item index="3"><router-link to="/short-address">短地址</router-link></el-menu-item>
-    <el-menu-item index="4"><router-link to="/address">地址生成</router-link></el-menu-item>
-    <el-menu-item index="5"><router-link to="/tx">广播交易</router-link></el-menu-item>
+    <el-menu-item index="1"><router-link to="/wallet/index">钱包</router-link></el-menu-item>
+    <el-menu-item index="2"><router-link to="/staking/index">质押</router-link></el-menu-item>
+    <el-menu-item index="3"><router-link to="/short-address/index">短地址</router-link></el-menu-item>
+    <el-menu-item index="4"><router-link to="/address/generate">地址生成</router-link></el-menu-item>
+    <el-submenu index="5">
+      <template #title>交易</template>
+      <el-menu-item index="5-1"><router-link to="/tx/boardcast">广播交易</router-link></el-menu-item>
+      <el-menu-item index="5-2"><router-link to="/tx/validate">验证交易</router-link></el-menu-item>
+    </el-submenu>
   </el-menu>
 </template>
 
@@ -21,19 +21,40 @@ export default {
   name: "Menu",
   data() {
     return {
-      activeIndex: 1,
+      activeIndex: "1",
     };
   },
   methods: {
-    handleSelect(index: number) {
-      this.activeIndex = index;
+    handleSelect(key: string, keyPath: string) {
+      this.activeIndex = key;
     },
   },
 };
 </script>
 
-<style scoped>
-  .el-menu-demo {
+<style type="scss" scoped>
+  .el-menu-item a {
+    text-decoration: none;
+    color: black;
+  }
 
+  .el-menu-item a:link {
+    text-decoration: none;
+    color: black;
+  }
+
+  .el-menu-item a:visited {
+    text-decoration: none;
+    color: black;
+  }
+
+  .el-menu-item a:hover {
+    text-decoration: none;
+    color: black;
+  }
+
+  .el-menu-item a:active {
+    text-decoration: none;
+    color: black;
   }
 </style>>

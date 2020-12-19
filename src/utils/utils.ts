@@ -1,7 +1,6 @@
 
-class Utils {
-
-  /**
+export default class {
+/**
    * 设置标题
    * @param title 标题
    */
@@ -17,11 +16,9 @@ class Utils {
     var a = document.createElement('a')
     a.setAttribute('href', url)
     a.setAttribute('target', '_blank')
-    //a.setAttribute('id', 'tmpLink')
+
     document.body.appendChild(a)
     a.click()
-
     document.body.removeChild(a)
   }
-
 }

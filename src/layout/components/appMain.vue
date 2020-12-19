@@ -1,6 +1,5 @@
 <template>
   <el-main class="app-main">
-    main content
     <router-view />
   </el-main>
 </template>

@@ -22,6 +22,10 @@ router.afterEach((to, from, failure) => {
     console.log("afterEach, from=", from);
     console.log("afterEach, failure=", failure);
 
+    if (to.matched.length == 0) {
+      console.log('no matched route, url=', to.fullPath);
+    }
+
     if (isNavigationFailure(failure)) {
       console.log('failed navigation', failure)
     }
