@@ -1,13 +1,13 @@
 <template>
-  <div>短地址</div>
+    Bandot
 </template>
 
 <script lang="ts">
 export default {
-  name: "ShortAddress",
+  name: "Bandot"
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
 </style>

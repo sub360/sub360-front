@@ -3,16 +3,8 @@
 </template>
 
 <script lang="ts">
-import { Keyring } from "@polkadot/keyring";
-import { cryptoWaitReady, mnemonicGenerate } from "@polkadot/util-crypto";
-
 export default {
-  name: "Staking",
-  data() {
-    return {
-      activeIndex: "1",
-    };
-  },
+  name: "Staking"
 };
 </script>
 

@@ -1,13 +1,13 @@
 <template>
-  <div>短地址</div>
+    Acala
 </template>
 
 <script lang="ts">
 export default {
-  name: "ShortAddress",
+  name: "Tx"
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
 </style>

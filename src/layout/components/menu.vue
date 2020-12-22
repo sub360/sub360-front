@@ -13,6 +13,11 @@
       <el-menu-item index="5-1"><router-link to="/tx/boardcast">广播交易</router-link></el-menu-item>
       <el-menu-item index="5-2"><router-link to="/tx/validate">验证交易</router-link></el-menu-item>
     </el-submenu>
+    <el-submenu index="6">
+      <template #title>羊毛</template>
+      <el-menu-item index="6-1"><router-link to="/wool/acala">Acala</router-link></el-menu-item>
+      <el-menu-item index="6-2"><router-link to="/wool/bandot">Bandot</router-link></el-menu-item>
+    </el-submenu>
   </el-menu>
 </template>
 
@@ -27,6 +32,7 @@ export default {
   methods: {
     handleSelect(key: string, keyPath: string) {
       this.activeIndex = key;
+      console.log("key=", key, ", keyPath=", keyPath);
     },
   },
 };
